@@ -1,9 +1,10 @@
 #!/bin/bash
 # ifスクリプト
 # Last Edited: 2024-09-16
-if [ -z "$1" ] ; then
-    echo "Usage: $0 <name>"
-    exit 1
+if [ "$#" -lt 1 ] ; then
+    read -p "Enter your name: " name
+else
+    name=$1
 fi
-echo "Hello $1"
+echo "Hello $name"
 exit 0
